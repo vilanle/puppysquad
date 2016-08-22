@@ -1,6 +1,9 @@
 .container.navigation-app {
   background: #ffd580;
   width: 100%;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  color: black;
 }
 
 .container.topnav {
@@ -18,4 +21,6 @@
 .navbar-brand.topnav.app-name {
     font-size: 20pt;
     color: #964d3a;
+    font-family: 'Open Sans';
+    font-weight: 100;
 }
