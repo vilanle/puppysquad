@@ -15,6 +15,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/navbar.css" rel="stylesheet">
+
     <link href="css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -27,7 +29,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style>
+      #map {
+        height: 100%;
+      }
+    </style>
 </head>
 
 <body>
@@ -51,7 +57,7 @@
             <!-- /.navbar-collapse -->
         </div>
 
-        <div class="container topnav">
+        <div class="container navigation-app">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -101,47 +107,23 @@
         <div class="row">
           <div class="col-lg-8">
             <div class="event">
-
             </div>
-          </div>
-          <div class="col-lg-4"></div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-8">
             <div class="event">
-
             </div>
-          </div>
-          <div class="col-lg-4"></div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-8">
             <div class="event">
-
             </div>
-          </div>
-          <div class="col-lg-4"></div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-8">
             <div class="event">
-
             </div>
-          </div>
-          <div class="col-lg-4"></div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-8">
             <div class="event">
-
+            </div>
+            <div class="event">
             </div>
           </div>
-          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+            <div id="map"></div>
+          </div>
         </div>
+
 
       </div>
       <!-- /.container -->
@@ -177,11 +159,24 @@
         </div>
     </footer>
 
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv460IEdNuuTaGtHUXOAPuTF8O5K7Xpx0&libraries=places&callback=initMap"
+         async defer></script>
 
 </body>
 
