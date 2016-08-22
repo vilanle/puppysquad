@@ -31,7 +31,7 @@ h6 {
 }
 
 .intro-header {
-    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 150px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
@@ -178,4 +178,14 @@ p.copyright {
 
 .search-bar {
   margin-top: 10px;
+}
+
+.logo {
+  width:80px;
+  height: 80px;
+  float: left;
+}
+
+.app-name {
+    font-size: 20pt;
 }
