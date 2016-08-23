@@ -181,6 +181,41 @@ p.copyright {
   margin-top: 10px;
 }
 
-#map {
-  height: 100%;
+.col-lg-1 {
+  width: 14%;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+.filters input.form-control {
+  margin: 5px;
+  margin-left: -2px;
+}
+
+.form-group {
+  width: 100px;
+  margin: 5px;
+}
+
+label {
+  color: black;
+  width: 100px;
+}
+
+.my-group .form-control{
+  width:50%;
+}
+
+#distancefilter {
+  width: 119px;
+}
+
+.distancefrom {
+  width: 18%;
+}
+
+.zipcode {
+  margin-left: -18px;
 }
