@@ -202,6 +202,7 @@ p.copyright {
 label {
   color: black;
   width: 100px;
+  margin-top: 5px;
 }
 
 .my-group .form-control{
