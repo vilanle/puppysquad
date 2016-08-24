@@ -14,8 +14,11 @@
   width: 100%;
   padding:20px;
   background: url(../img/dog.jpg);
-  background-size: cover;
-  background-position-y: -140px;
+  background-size: 100%;
+  background-position-y: -120px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 .logo {
