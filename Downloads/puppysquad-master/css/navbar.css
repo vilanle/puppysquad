@@ -1,0 +1,92 @@
+.navigation-app {
+  background: #ffb91a;
+  width: 100%;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  color: black;
+}
+
+.navbar-default .navbar-collapse.navbar-default .navbar-form {
+  border:none;
+}
+
+.container.topnav {
+  width: 100%;
+  padding:20px;
+  background: url(../img/dog.jpg);
+  background-size: cover;
+  background-position-y: -140px;
+}
+
+.logo {
+  width:80px;
+  height: 80px;
+  float: left;
+}
+
+.app-name {
+    font-size: 37pt;
+    color: black;
+    font-family: 'Bitter';
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+    width: 400px;
+}
+
+.app-name a {
+  color: #e6be1a;
+
+}
+
+.app-name a:hover {
+  text-decoration: none;
+
+}
+
+#puppynav {
+  width: 100%;
+  text-align: center;
+  font-family: 'Bitter';
+
+}
+
+#puppynav li {
+  width: 33.33%;
+}
+
+#puppynav a {
+  color: white;
+  font-weight: bold;
+  font-family: 'Bitter';
+}
+
+#puppynav a:hover {
+  color: white;
+  font-weight: bold;
+  background: #ffca53;
+}
+
+.subtitle {
+  position: relative;
+  left: 20px;
+  color: white;
+  font-size: 13pt;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  width: 400px;
+}
+
+#login {
+  border-radius: 0px;
+  position: relative;
+  top:50px;
+  right: 10px;
+  background: #333;
+  color: white;
+  font-family: 'Bitter';
+}
+
+#login:hover{
+  background: #555;
+}
