@@ -31,7 +31,7 @@ h6 {
 }
 
 .intro-header {
-    padding-top: 150px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 200px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
@@ -218,4 +218,25 @@ label {
 
 .zipcode {
   margin-left: -18px;
+}
+
+.event {
+  color: black;
+}
+
+.event-image {
+  float: left;
+  height: 100px;
+  width: 100px;
+  background: black;
+  border: none;
+}
+
+.event-title {
+  float: left;
+  font-size: 20pt;
+}
+
+.event-time {
+  float: right;
 }
