@@ -173,7 +173,10 @@ p.copyright {
   height: 100px;
   margin-top: 10px;
   margin-botton: 10px;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 2px 2px 1px -1px rgba(189,189,189,1);
+  -moz-box-shadow: 2px 2px 1px -1px rgba(189,189,189,1);
+  box-shadow: 2px 2px 1px -1px rgba(189,189,189,1);
   width: 100%;
 }
 
@@ -209,7 +212,7 @@ label {
 }
 
 #distancefilter {
-  width: 119px;
+  width: 125px;
 }
 
 .distancefrom {
@@ -222,12 +225,14 @@ label {
 
 .event {
   color: black;
+  padding: 5px;
+  height: 97px;
 }
 
 .event-image {
   float: left;
-  height: 100px;
-  width: 100px;
+  height: 85px;
+  width: 85px;
   background: black;
   border: none;
 }
@@ -235,8 +240,46 @@ label {
 .event-title {
   float: left;
   font-size: 20pt;
+  margin-left: 10px;
+  line-height: 70px;
+  font-weight: 100;
 }
 
 .event-time {
   float: right;
+  font-size: 18pt;
+  margin-right: 20px;
+  line-height: 40px;
+  font-weight: 100;
+  text-align: right;
+}
+
+.event-time span {
+  float: right;
+  font-size: 12pt;
+  line-height: 70px;
+  font-weight: 100;
+  text-align: right;
+}
+
+.form-control {
+  border-radius: 0px;
+  background: none;
+  box-shadow: none;
+  font-family: sans-serif, 'FontAwesome';
+  font-size: 10pt;
+  font-weight: 100;
+}
+
+br {
+   display: block;
+   margin: -25px 0;
+   content: ' ';
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
