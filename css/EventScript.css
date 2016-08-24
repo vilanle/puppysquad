@@ -31,7 +31,7 @@ img{
 
 #buttons{
   margin-top:20px;
-  margin-left: 150px;
+  margin-left: 170px;
   float: center;
 
 }
@@ -94,6 +94,7 @@ img{
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
+  margin-left:45px;
 	font-family: 'Bookman Old Style'
 }
 
