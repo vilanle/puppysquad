@@ -20,7 +20,7 @@
 
 
       <!--<link href="css/landing-page.css" rel="stylesheet">-->
-      <link href="css/map.css" rel="stylesheet">
+      <link href="./../css/map.css" rel="stylesheet">
 
       <!-- Custom Fonts -->
       <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -90,12 +90,12 @@
 <a name="about"></a>
 <div class="intro-header">
   <div class ="container">
+
       <div class="row">
         <div class="col-lg-8">
-          <div class = "row">
-          <div class="row">
-            <img src="http://cdn3-www.dogtime.com/assets/uploads/gallery/pembroke-welsh-corgi-dog-breed-pictures/prance-8.jpg" id="Mainimg"/>
-          </div>
+
+            <img src="./../img/Corgi2.jpg" id="Mainimg"/>
+
           <div class="row" id = "MainInfo">
             <div class = "event-title">
                <div class="col-lg-4">
@@ -103,27 +103,28 @@
                  <h4 class="page-header">Hosted By: <a href="corgination.html">Corgi Nation</a></h4>
                </div>
              </div>
-
              <!-- buttons -->
-             <div class ="col-lg-3"
+             <div class ="col-lg-4">
               <div id="buttons">
                <button id="Gbutton">Going</button>
                <button id="Mbutton">Maybe</button>
               </div>
             </div>
+          </div>
 
+          <div class ="row" id="TimeAndLocation">
+            <div class = "col-lg-8">
             <!-- DateTime -->
-              <div class="col-lg-6">
+              <div class="col-lg-4">
                <div class ="event-time" id="DateTime">
-        				       <h6>Date and Time:</h6>
-        				       <h7> 8/25/2016
-        				           2:00 pm </h7>
+                       <h6>Date and Time:</h6>
+                       <h7> 8/25/2016
+                           2:00 pm </h7>
               </div>
             </div>
 
-
           <!-- location -->
-            <div class="col-lg-3">
+            <div class="col-lg-4">
               <div class="event-location" id="Location">
                 <p>
                   <h6>Location:</h6>
@@ -132,11 +133,24 @@
               </div>
             </div>
           </div>
+          </div>
 
+<!--Price -->
+          <div class ="row" id="Price">
+            <div class = "col-lg-8"
+            <!-- Price -->
+              <div class="col-lg-6">
+               <div class ="event-price" id="Price">
+        				       <h6>Price</h6>
+        				       <h7> Free </h7>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <div class = "row" id ="SecondaryInfo">
+          <div class = "row" id ="DetailInfo">
             <!--Details -->
-              <div class="col-lg-6"
+              <div class="col-lg-8"
                 <div class="details" id="details">
                   <h6>Event Details</h6>
                   <h7>This will be literally the greatest Corgi
@@ -189,6 +203,7 @@
               						      Zeek</li>
             				</div>
                   </div>
+                </div>
 
 
             <!-- Comments -->
@@ -213,26 +228,23 @@
             				</div>
                 </div>
            </div>
-         </div>
-       </div>
-         <!-- Map -->
-             <div class="col-lg-4">
-                <div id="map"></div>
-                </div>
 
-      </div>
+        <!-- End of left column -->
+         </div>
+
+       <!-- Map -->
+             <div class="col-lg-4">
+              <div id="map"></div>
+            </div>
+
 
 <!-- Row -->
-    </div>
-
+   </div>
 <!--Container -->
  </div>
 
  <!--Intro Header -->
 </div>
-
-
-
 
 <!-- Main Body -->
 </body>

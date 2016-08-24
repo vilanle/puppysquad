@@ -30,10 +30,10 @@ img{
 }
 
 #buttons{
-  margin-top:20px;
-  margin-left: 170px;
-  float: center;
-
+  position:relative;
+  left:180px;
+  float: right;
+  margin-top: 20px;
 }
 
 #Gbutton {
@@ -69,12 +69,24 @@ img{
 
 
 .event-time {
-  position:relative;
-  right: 15px;
   text-align: left;
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
+	font-family: 'Bookman Old Style'
+}
+
+.event-price > h6 {
+   font-size:22px;
+   margin-bottom: 0px;
+}
+
+.event-price > h7 {
+   font-size:17px;
+   margin-bottom: 0px;
+}
+
+.event-price {
 	font-family: 'Bookman Old Style'
 }
 
@@ -88,19 +100,18 @@ img{
    margin-bottom: 0px;
 }
 
+
 .event-location {
-  float:center;
+  position:relative;
+  left: 325px;
   text-align: left;
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
-  margin-left:45px;
 	font-family: 'Bookman Old Style'
 }
 
-
-
-#SecondaryInfo{
+#DetailInfo{
   position:relative;
   left:30px;
   top:30px;
@@ -126,6 +137,9 @@ img{
 
 
 #AttCom{
+  float:center;
+  position:relative;
+  top: 30px;
   padding-top:20px;
   margin-top:50px;
   font-family: 'Bookman Old Style'
