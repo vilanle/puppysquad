@@ -179,12 +179,12 @@ img{
   display: inline-block;
 }
 
-.CommentSection ul {
+.comments ul {
 	list-style:none;
 	list-style-type:none;
 }
 
-.comments li {
+.comments > li {
   margin-top:10px;
 	display: inline;
 }
