@@ -115,25 +115,35 @@
             </div><!-- /input-group image-preview [TO HERE]--> 
         </div>
     </div>
-
+<br></br>
 
     <div class="row">
          <form>
             <div class="patrick row">
-            <label for="example-text-input">Event Title</label>
+          <div class="col-lg-2">
+            <label for="example-text-input">Event Title:</label>
+            </div>
+
+          <div class="col-lg-6">
                 <input class="form-control" type="text" id="example-text-input">
+            </div>
             </div>
 
             <div class="patrick row">
-            <label for="example-date-input">Date</label>
+                          <div class="col-lg-2">
+            <label for="example-date-input">Date:</label>
+            </div>
+                      <div class="col-lg-6">
                 <input class="form-control" type="date" id="example-date-input">
             </div>
-
-           <br> </br>
+</div>
 
             <form class="form-inline">
                 <div class="patrick">
-                    <label for="breed">Breed</label>
+                              <div class="col-lg-2">
+                    <label for="breed">Breed:</label>
+                    </div>
+                              <div class="col-lg-4">
                     <select class="form-control" id="sel1">
                         <option selected="selected">Select Breed</option>
                         <option>Beagle</option>
@@ -141,9 +151,13 @@
                         <option>French Bulldog</option>
                         <option>Great Dane</option>
                     </select>
+                    </div>
                 </div>
                 <div class="patrick">
-                    <label for="breed">Dog Size</label>
+                                                  <div class="col-lg-2">
+                    <label for="breed">Dog Size:</label>
+                    </div>
+                                                  <div class="col-lg-4">
                     <select class="form-control" id="sel1">
                         <option selected="selected">Select Dog Size</option>
                         <option>Small</option>
@@ -151,18 +165,26 @@
                         <option>Large</option>
                     </select>
                 </div>
+                </div>
+
             </form>
 
             <div class="patrick row">
-                <label for="example-date-input">Location</label>
+                                          <div class="col-lg-2">
+                <label for="example-date-input">Location:</label>
+                </div>
+                                          <div class="col-lg-6">
                     <input class="form-control" type="text" id="example-date-input" placeholder="Address">
                     <input class="form-control" type="text" id="example-date-input" placeholder="City, State, Zipcode">
             </div>
+            </div>
 
-           <br> </br>
 
             <div class="patrick">
-                 <label for="example-date-input">Price</label>
+                                          <div class="col-lg-2">
+                 <label for="example-date-input">Price:</label>
+                 </div>
+                                           <div class="col-lg-3">
                   <select class="form-control" id="sel1">
                     <option selected="selected">Select Price</option>
                     <option>Free</option>
@@ -171,16 +193,22 @@
                     <option>$$$</option>
                   </select>
             </div>
+            </div>
 
            <br> </br>
 
         <div class="patrick row">
-            <label for="description">Event Description</label>
-            <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+                                      <div class="col-lg-2">
+            <label for="description">Event Description:</label>
+            </div>
+                                     <div class="col-lg-8">
+            <textarea class="form-control" id="exampleTextarea" rows="7"></textarea>
+        </div>
         </div>
 
+<br></br>
 
-  <button type="submit" class="btn btn-primary">Publish Event</button>
+  <button type="submit" class="btn btn-primary pull-right">Publish Event</button>
          </form>
 </div>
           </div>
@@ -196,26 +224,6 @@
 
     </div>
     <!-- /.intro-header -->
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Events</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; PuppySquad 2016. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="../js/index.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv460IEdNuuTaGtHUXOAPuTF8O5K7Xpx0&callback=initMap&libraries=places"
