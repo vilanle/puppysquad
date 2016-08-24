@@ -173,7 +173,10 @@ p.copyright {
   height: 100px;
   margin-top: 10px;
   margin-botton: 10px;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 2px 2px 1px -1px rgba(189,189,189,1);
+  -moz-box-shadow: 2px 2px 1px -1px rgba(189,189,189,1);
+  box-shadow: 2px 2px 1px -1px rgba(189,189,189,1);
   width: 100%;
 }
 
@@ -202,7 +205,6 @@ p.copyright {
 label {
   color: black;
   width: 100px;
-  margin-top: 5px;
 }
 
 .my-group .form-control{
@@ -210,7 +212,7 @@ label {
 }
 
 #distancefilter {
-  width: 119px;
+  width: 125px;
 }
 
 .distancefrom {
@@ -223,12 +225,14 @@ label {
 
 .event {
   color: black;
+  padding: 5px;
+  height: 97px;
 }
 
 .event-image {
   float: left;
-  height: 100px;
-  width: 100px;
+  height: 85px;
+  width: 85px;
   background: black;
   border: none;
 }
@@ -236,31 +240,70 @@ label {
 .event-title {
   float: left;
   font-size: 20pt;
+  margin-left: 10px;
+  line-height: 70px;
+  font-weight: 100;
 }
 
 .event-time {
   float: right;
+  font-size: 18pt;
+  margin-right: 20px;
+  line-height: 40px;
+  font-weight: 100;
+  text-align: right;
 }
 
-.image-preview-input {
-    position: relative;
-	overflow: hidden;
-	margin: 0px;    
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;    
+.event-time span {
+  float: right;
+  font-size: 12pt;
+  line-height: 70px;
+  font-weight: 100;
+  text-align: right;
 }
-.image-preview-input input[type=file] {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	cursor: pointer;
-	opacity: 0;
-	filter: alpha(opacity=0);
+
+.form-control {
+  border-radius: 0px;
+  background: none;
+  box-shadow: none;
+  font-family: sans-serif, 'FontAwesome';
+  font-size: 10pt;
+  font-weight: 100;
 }
-.image-preview-input-title {
-    margin-left:2px;
+
+br {
+   display: block;
+   margin: -25px 0;
+   content: ' ';
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#signup {
+  display:none;
+}
+
+#signupbutton {
+  display: none;
+}
+
+#back-button {
+  bottom-padding: 10px;
+}
+
+#form-signup {
+  text-align: center;
+}
+
+#logininfo, #signupquestion{
+  text-align: center;
+}
+
+#confirmation {
+  display: none;
 }
