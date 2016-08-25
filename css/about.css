@@ -31,36 +31,37 @@ h3 {
     font-size: 14px;
 }
 
-#teampic {
-    border: 5px black; 
-    margin: 8% 10% 0% 10%;
-    padding-top: 20%;
-    position: auto;
+#piclayout {
+    text-align: center;
+    padding-left: 10%;
+    padding-right:10%;
+   
+     margin-bottom: 50px; 
     
-      
-    background: url(../img/teampic4.jpg) no-repeat center center; 
-    background-position: center; 
 }
 
 #textlayout {
+
     color: black bold;
-    padding-left: 12%;
-    padding-right: 10%;
+    
     font-size: 25px;
-    margin-bottom: 200px;
+    
+}
+
+#overlay {
+     text-align: left;
+     margin-left: 11em;
+    margin-right:11em;
+    margin-bottom: 200px; 
+    
+}
+#teampic {
+    width: 1200px;
+    height: 500px;
+    padding-top: 100px;
+    position: center;
 }
  
 
-footer {
-    padding: 20px 1000px 50px 200px;
-    background-color: #f8f8f8;
-    font-size: 12px;
-     position:fixed;
-     bottom:0;
-     left: 0;
-    
-}
-p.copyright {
-    margin: 15px 0 0;
-}
+
 
