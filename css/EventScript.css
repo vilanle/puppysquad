@@ -1,9 +1,5 @@
 body {
 }
-#MainPage {
-  position:relative;
-  top: 200px;
-}
 
 img{
   border:0;
@@ -17,9 +13,6 @@ img{
     background-size: cover;
 }
 
-
-
-
 .page-title {
   margin-bottom: 3px;
 	font-family: 'Open Sans'
@@ -29,12 +22,20 @@ img{
 	font-family: 'Open Sans'
 }
 
+
+#MainInfo{
+  position:relative;
+  border-bottom-style:solid;
+  border-bottom-color:orange;
+}
+
 .buttons{
   position:relative;
   left:180px;
   float: right;
   margin-top: 20px;
 }
+
 
 #Gbutton {
     padding: 12px 16px;
@@ -56,6 +57,14 @@ img{
 }
 
 
+#TimeAndLocation{
+  position:relative;
+  right:14px;
+}
+
+.event-time{
+  text-align:left;
+}
 .event-time > h6 {
    font-size:22px;
    margin-bottom: 0px;
@@ -76,6 +85,22 @@ img{
 	font-family: 'Open Sans'
 }
 
+.event-location > h6 {
+   font-size:22px;
+   margin-bottom: 0px;
+}
+
+.event-location > h7 {
+   font-size:17px;
+   margin-bottom: 0px;
+}
+
+
+#PriceBreed{
+  position: relative;
+  right:14px;
+}
+
 .event-price > h6 {
    font-size:22px;
    margin-bottom: 0px;
@@ -90,14 +115,27 @@ img{
 	font-family: 'Open Sans'
 }
 
-.event-location > h6 {
+.event-breed > h6 {
    font-size:22px;
    margin-bottom: 0px;
 }
 
-.event-location > h7 {
+.event-breed > h7 {
    font-size:17px;
    margin-bottom: 0px;
+}
+
+.event-breed {
+	font-family: 'Open Sans'
+}
+
+.event-breed {
+  position:relative;
+  left:20px;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 3px;
 }
 
 
@@ -111,12 +149,32 @@ img{
 	font-family: 'Open Sans'
 }
 
-#DetailInfo{
+
+#details{
   position:relative;
-  left:30px;
+  left:10px;
+}
+
+
+#DetailInfo{
+  border-bottom-style: solid;
+  border-bottom-color: orange;
+  border-top-style: solid;
+  border-top-color: orange;
+  padding-bottom: 20px;
+  position:relative;
+  left:5px;
   top:30px;
 }
 
+
+#details > h5 {
+   font-size:22px;
+}
+
+#details > h7 {
+   font-size:17px;
+}
 
 
 #details > h6 {
@@ -134,17 +192,6 @@ img{
   margin-bottom: 3px;
 	font-family: 'Open Sans'
 }
-
-
-#AttCom{
-  float:center;
-  position:relative;
-  top: 30px;
-  padding-top:20px;
-  margin-top:50px;
-  font-family: 'Open Sans'
-}
-
 
 #attendenceRow{
   position:relative;
@@ -184,6 +231,24 @@ img{
 .Maybe li {
   display: inline-block;
 }
+
+#commentRow{
+  border-top-style:solid;
+  border-top-color:orange;
+  position:relative;
+  top:50px;
+  left: 10px;
+}
+
+ul.commentList > h6{
+  font-size:50px;
+  display: inline-block;
+}
+
+ul.commentList > span{
+
+}
+
 
 .comments ul {
 	list-style:none;
