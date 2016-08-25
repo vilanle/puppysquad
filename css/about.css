@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-    font-size: 30px; 
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -35,33 +35,29 @@ h3 {
     text-align: center;
     padding-left: 10%;
     padding-right:10%;
-   
-     margin-bottom: 50px; 
-    
+
+     margin-bottom: 50px;
+
 }
 
 #textlayout {
 
     color: black bold;
-    
+
     font-size: 25px;
-    
+
 }
 
 #overlay {
      text-align: left;
      margin-left: 11em;
     margin-right:11em;
-    margin-bottom: 200px; 
-    
+    margin-bottom: 200px;
+
 }
 #teampic {
     width: 1200px;
     height: 500px;
-    padding-top: 100px;
+    padding-top: 10px;
     position: center;
 }
- 
-
-
-

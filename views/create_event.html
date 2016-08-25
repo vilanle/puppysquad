@@ -37,7 +37,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <nav class="navbar navbar-default navbar-static-top topnav" role="navigation">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -93,23 +93,23 @@
           <div class="col-lg-8">
               <!--
             <div class="row">
-              <div><img src = "img/dogs.jpg"></div><!-- /input-group 
-            </div> --> 
+              <div><img src = "img/dogs.jpg"></div><!-- /input-group
+            </div> -->
 
             <div class = "row">
                <h1> Create an Event </h1>
                 </div>
                 <br> </br>
-            <div class="row">    
+            <div class="row">
                             <div class = "col-lg-2">
                             <label for="example-date-input">Image Upload:</label>
                             </div>
             </div>
 
                             <div class = "row">
-        <div class=" col-sm-8 col-sm-offset-2">  
+        <div class=" col-sm-8 col-sm-offset-2">
             <!-- image-preview-filename input [CUT FROM HERE]-->
-                                       
+
             <div class="input-group image-preview">
                 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
                 <span class="input-group-btn">
@@ -124,7 +124,7 @@
                         <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
                     </div>
                 </span>
-            </div><!-- /input-group image-preview [TO HERE]--> 
+            </div><!-- /input-group image-preview [TO HERE]-->
         </div>
     </div>
 <br></br>
@@ -261,17 +261,17 @@
 
 
     <script>
-$(document).on('click', '#close-preview', function(){ 
+$(document).on('click', '#close-preview', function(){
     $('.image-preview').popover('hide');
     // Hover befor close the preview
     $('.image-preview').hover(
         function () {
            $('.image-preview').popover('show');
-        }, 
+        },
          function () {
            $('.image-preview').popover('hide');
         }
-    );    
+    );
 });
 
 $(function() {
@@ -297,27 +297,27 @@ $(function() {
         $('.image-preview-filename').val("");
         $('.image-preview-clear').hide();
         $('.image-preview-input input:file').val("");
-        $(".image-preview-input-title").text("Browse"); 
-    }); 
+        $(".image-preview-input-title").text("Browse");
+    });
     // Create the preview image
-    $(".image-preview-input input:file").change(function (){     
+    $(".image-preview-input input:file").change(function (){
         var img = $('<img/>', {
             id: 'dynamic',
             width:250,
             height:200
-        });      
+        });
         var file = this.files[0];
         var reader = new FileReader();
         // Set preview image into the popover data-content
         reader.onload = function (e) {
             $(".image-preview-input-title").text("Change");
             $(".image-preview-clear").show();
-            $(".image-preview-filename").val(file.name);            
+            $(".image-preview-filename").val(file.name);
             img.attr('src', e.target.result);
             $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
-        }        
+        }
         reader.readAsDataURL(file);
-    });  
+    });
 });
 
         </script>
