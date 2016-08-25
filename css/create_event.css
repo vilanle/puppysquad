@@ -248,7 +248,7 @@ label {
 	margin: 0px;    
     color: #333;
     background-color: #fff;
-    border-color: #ccc;    
+    border-color: #ccc;   
 }
 .image-preview-input input[type=file] {
 	position: absolute;
@@ -262,5 +262,16 @@ label {
 	filter: alpha(opacity=0);
 }
 .image-preview-input-title {
-    margin-left:2px;
+    margin-right:2px;
+}
+
+.move{
+    margin-top:30px;
+}
+
+h1 {
+  font-weight: bold;
+  color: black;
+  font-size: 32px;
+  opacity: 1;
 }

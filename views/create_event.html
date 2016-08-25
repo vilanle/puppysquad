@@ -95,9 +95,21 @@
             <div class="row">
               <div><img src = "img/dogs.jpg"></div><!-- /input-group 
             </div> -->
+
+            <div class = "row">
+               <h1> Create an Event </h1>
+                </div>
+                <br> </br>
             <div class="row">    
-        <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  
+                            <div class = "col-lg-2">
+                            <label for="example-date-input">Image Upload:</label>
+                            </div>
+            </div>
+
+                            <div class = "row">
+        <div class=" col-sm-8 col-sm-offset-2">  
             <!-- image-preview-filename input [CUT FROM HERE]-->
+                                       
             <div class="input-group image-preview">
                 <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
                 <span class="input-group-btn">
@@ -121,22 +133,29 @@
          <form>
             <div class="patrick row">
           <div class="col-lg-2">
-            <label for="example-text-input">Event Title:</label>
+            <label for="example-text-input"> Event Title:<font color="red">*</font></label>
             </div>
 
           <div class="col-lg-6">
-                <input class="form-control" type="text" id="example-text-input">
+                <input class="form-control" required= "true" type="text" id="example-text-input">
             </div>
+
+            <div class="col-lg-4">
+                <font color="red">* Required Fields</font>
+                </div>
             </div>
+
+            <br> </br>
 
             <div class="patrick row">
                           <div class="col-lg-2">
-            <label for="example-date-input">Date:</label>
+            <label for="example-date-input">Date:<font color="red">*</font></label>
             </div>
                       <div class="col-lg-6">
                 <input class="form-control" type="date" id="example-date-input">
             </div>
 </div>
+         <br> </br>
 
             <form class="form-inline">
                 <div class="patrick">
@@ -153,6 +172,7 @@
                     </select>
                     </div>
                 </div>
+
                 <div class="patrick">
                                                   <div class="col-lg-2">
                     <label for="breed">Dog Size:</label>
@@ -169,9 +189,11 @@
 
             </form>
 
+                     <br> </br>
+
             <div class="patrick row">
                                           <div class="col-lg-2">
-                <label for="example-date-input">Location:</label>
+                <label for="example-date-input">Location:<font color="red">*</font></label>
                 </div>
                                           <div class="col-lg-6">
                     <input class="form-control" type="text" id="example-date-input" placeholder="Address">
@@ -199,7 +221,7 @@
 
         <div class="patrick row">
                                       <div class="col-lg-2">
-            <label for="description">Event Description:</label>
+            <label for="description">Event Description:<font color="red">*</font></label>
             </div>
                                      <div class="col-lg-8">
             <textarea class="form-control" id="exampleTextarea" rows="7"></textarea>
@@ -225,7 +247,9 @@
     </div>
     <!-- /.intro-header -->
 
+    <script src="../js/map.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/signup.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv460IEdNuuTaGtHUXOAPuTF8O5K7Xpx0&callback=initMap&libraries=places"
     async defer></script>
 
