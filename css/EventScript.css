@@ -1,40 +1,41 @@
 body {
 }
-#MainPage {
-  position:relative;
-  top: 200px;
-}
 
 img{
   border:0;
 }
 
 .intro-header {
-    padding-top: 200px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: left;
     background: url() no-repeat center center;
     background-size: cover;
 }
 
-
-
-
 .page-title {
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 .page-header {
   margin-top: 0px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
-#buttons{
+
+#MainInfo{
+  position:relative;
+  border-bottom-style:solid;
+  border-bottom-color:orange;
+}
+
+.buttons{
   position:relative;
   left:180px;
   float: right;
   margin-top: 20px;
 }
+
 
 #Gbutton {
     padding: 12px 16px;
@@ -56,6 +57,14 @@ img{
 }
 
 
+#TimeAndLocation{
+  position:relative;
+  right:14px;
+}
+
+.event-time{
+  text-align:left;
+}
 .event-time > h6 {
    font-size:22px;
    margin-bottom: 0px;
@@ -73,21 +82,7 @@ img{
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
-}
-
-.event-price > h6 {
-   font-size:22px;
-   margin-bottom: 0px;
-}
-
-.event-price > h7 {
-   font-size:17px;
-   margin-bottom: 0px;
-}
-
-.event-price {
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
 .event-location > h6 {
@@ -101,6 +96,49 @@ img{
 }
 
 
+#PriceBreed{
+  position: relative;
+  right:14px;
+}
+
+.event-price > h6 {
+   font-size:22px;
+   margin-bottom: 0px;
+}
+
+.event-price > h7 {
+   font-size:17px;
+   margin-bottom: 0px;
+}
+
+.event-price {
+	font-family: 'Open Sans'
+}
+
+.event-breed > h6 {
+   font-size:22px;
+   margin-bottom: 0px;
+}
+
+.event-breed > h7 {
+   font-size:17px;
+   margin-bottom: 0px;
+}
+
+.event-breed {
+	font-family: 'Open Sans'
+}
+
+.event-breed {
+  position:relative;
+  left:20px;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 3px;
+}
+
+
 .event-location {
   position:relative;
   left: 325px;
@@ -108,15 +146,35 @@ img{
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
-#DetailInfo{
+
+#details{
   position:relative;
-  left:30px;
+  left:10px;
+}
+
+
+#DetailInfo{
+  border-bottom-style: solid;
+  border-bottom-color: orange;
+  border-top-style: solid;
+  border-top-color: orange;
+  padding-bottom: 20px;
+  position:relative;
+  left:5px;
   top:30px;
 }
 
+
+#details > h5 {
+   font-size:22px;
+}
+
+#details > h7 {
+   font-size:17px;
+}
 
 
 #details > h6 {
@@ -132,17 +190,13 @@ img{
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
-
-#AttCom{
-  float:center;
+#attendenceRow{
   position:relative;
-  top: 30px;
-  padding-top:20px;
-  margin-top:50px;
-  font-family: 'Bookman Old Style'
+  top: 40px;
+  left: 17px;
 }
 
 
@@ -163,7 +217,7 @@ img{
 
 .MaybeList{
   position:relative;
-  bottom:40px;
+  left: 25px;
 }
 
 .Maybe{
@@ -175,9 +229,26 @@ img{
 }
 
 .Maybe li {
-  margin-right: 15px;
   display: inline-block;
 }
+
+#commentRow{
+  border-top-style:solid;
+  border-top-color:orange;
+  position:relative;
+  top:50px;
+  left: 10px;
+}
+
+ul.commentList > h6{
+  font-size:50px;
+  display: inline-block;
+}
+
+ul.commentList > span{
+
+}
+
 
 .comments ul {
 	list-style:none;
