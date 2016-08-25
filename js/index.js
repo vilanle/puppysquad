@@ -6,14 +6,20 @@ const initialState = {
   currentUser: {
     name: '',
     email: '',
-    password: ''
+    password: '',
+    createdEvents: [],
+    goingEvents: [],
+    maybeEvents: []
   }
 };
 const initialAccounts = [
   {
     name: 'Demo Account',
     email: 'demo@gmail.com',
-    password: 'demo'
+    password: 'demo',
+    createdEvents: [],
+    goingEvents: [],
+    maybeEvents: []
   }
 ];
 const initialEvents = [
@@ -26,7 +32,9 @@ const initialEvents = [
     location: 'Doyle Park, San Diego',
     price: 'free',
     description: 'Come meet awesome corgis!',
-    image: './img/corgi.jpg'
+    image: './img/corgi.jpg',
+    going: [],
+    maybe: []
   }
 ];
 const initialFilters = {
@@ -38,6 +46,8 @@ const initialFilters = {
   location: ''
 };
 const initialSearched = '';
+
+localStorage.clear();
 
 if (!localStorage.State) {
   localStorage.setItem('State', JSON.stringify(initialState));
