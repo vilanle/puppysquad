@@ -22,14 +22,14 @@ img{
 
 .page-title {
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 .page-header {
   margin-top: 0px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
-#buttons{
+.buttons{
   position:relative;
   left:180px;
   float: right;
@@ -73,7 +73,7 @@ img{
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
 .event-price > h6 {
@@ -87,7 +87,7 @@ img{
 }
 
 .event-price {
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
 .event-location > h6 {
@@ -108,7 +108,7 @@ img{
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
 #DetailInfo{
@@ -132,7 +132,7 @@ img{
   margin: 0px;
   padding: 0px;
   margin-bottom: 3px;
-	font-family: 'Bookman Old Style'
+	font-family: 'Open Sans'
 }
 
 
@@ -142,7 +142,14 @@ img{
   top: 30px;
   padding-top:20px;
   margin-top:50px;
-  font-family: 'Bookman Old Style'
+  font-family: 'Open Sans'
+}
+
+
+#attendenceRow{
+  position:relative;
+  top: 40px;
+  left: 17px;
 }
 
 
@@ -163,7 +170,7 @@ img{
 
 .MaybeList{
   position:relative;
-  bottom:40px;
+  left: 25px;
 }
 
 .Maybe{
@@ -175,7 +182,6 @@ img{
 }
 
 .Maybe li {
-  margin-right: 15px;
   display: inline-block;
 }
 
