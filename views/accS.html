@@ -31,8 +31,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
 
-        <link type="text/css" rel="stylesheet" href="stylesheet.css">
     </head>
 
 
@@ -100,38 +100,44 @@
 
       <!-- Account Settings -->
       <h1 style="width: 20%; margin-left: auto; margin-right: auto; text-align: center">My Account</h1>
-      <fieldset style="width: 25em; margin: auto; border: 1px solid black; padding: 12px">
+      <fieldset style="width: 20em; margin: auto; border: 1px solid black; padding: 12px">
         <form action="" method="post">
-          <div>
-            <td><label for="name">Full Name</label></td>
-            <td><input type="type" name="name" size="25"></td>
+            
+          <div class="input-group">
+            <label style="display:inline" for="name">Full Name</label>
+            <input type="text" name="name" class="form-control" style="background-color: #f1f1f1; width:109%">
           </div>
-          <div style="padding-top: 5px">
-            <label for="email">Email</label>
-            <input type="text" name="email" size="25">
+            
+          <div class="input-group" style="padding-top: 10px">
+            <label style="display:inline" for="email">Email</label>
+            <input type="text" name="email" class="form-control" style="background-color: #f1f1f1; width:124%">
           </div>
-
-          <div>
-            <label for="o_password">Current Password</label>
-            <input type="password" name="o_password" size="25" placeholder="Required to Change Password">
+            
+          <div class="input-group" style="padding-top: 10px">
+            <label style="display:inline; padding-bottom: 10px;" for="o_password">Current Password</label>
+            <input type="password" name="o_password" class="form-control" placeholder="Required to Change Password" style="background-color: #f1f1f1;">
           </div>
-          <div style="padding-top: 5px">
-            <label for="n_password">New Password</label>
-            <input type="password" id="npass" name="n_password" size="25" placeholder="Enter New Password">
+            
+          <div class="input-group" style="padding-top: 10px">
+            <label style="display:inline" for="n_password">New Password</label>
+            <input type="password" id="npass" name="n_password" class="form-control" placeholder="Enter New Password" style="background-color: #f1f1f1;">
           </div>
-          <div>
-            <label for="c_password">Confirm New Password</label>
-            <input type="password" id="cpass" name="c_password" size="25" placeholder="Confirm New Password"; onchange="checkPasswordMatch();">
+            
+          <div class="input-group" style="padding-top: 10px" >
+            <label style="display: inline;" for="c_password">Confirm New Password</label>
+            <input type="password" id="cpass" name="c_password" class="form-control" placeholder="Confirm New Password"; onchange="checkPasswordMatch();" style="background-color: #f1f1f1">
           </div>
+            
             <!-- Password Message -->
           <div class="registrationFormAlert" id="divCheckPasswordMatch">
           </div>
         <!-- Alternative Password Message 
           <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Passwords Match
         -->
-          <div style="width:25%; margin: auto">
-              <input type="submit" name="save" value="Save Changes" >
+          <div style="text-align: center; padding-top: 10px;">
+              <input type="submit" name="save" value="Save Changes">
           </div>
+            
         </form>
       </fieldset>
 
@@ -143,6 +149,8 @@
     
     	<!-- Bootstrap Core JS -->
 	<script src="../js/bootstrap.min.js"></script>
+    
+    
     
     </body>
 </html>
