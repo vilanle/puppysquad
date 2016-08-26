@@ -31,6 +31,19 @@ function login() {
   }
 }
 
+function back() {
+  let signupname = $('#signupname').val('');
+  let signupemail = $('#signupemail').val('');
+  let signuppassword = $('#signuppassword').val('');
+  let confirmpassword = $('#confirmpassword').val('');
+  $('#signup').hide();
+  $('#logininfo').show();
+  $('#signupquestion').show();
+  $('#signupbutton').hide();
+  $('#loginbutton').show();
+  $('#confirmation').hide();
+}
+
 function closelogin() {
   let signupname = $('#signupname').val('');
   let signupemail = $('#signupemail').val('');
