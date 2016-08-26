@@ -106,6 +106,14 @@ function signupconfirm() {
   $('#confirmation').show();
 }
 
+function checkCreateEvent() {
+  if (state.loggedIn === true) {
+    window.location ="../views/create_event.html";
+  } else {
+    alert('You must be logged in to create an event!');
+  }
+}
+
 function signuperror(number) {
   switch(number) {
     case 0:
