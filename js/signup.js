@@ -107,10 +107,26 @@ function signupconfirm() {
 }
 
 function checkCreateEvent() {
+  let state = JSON.parse(localStorage.State);
   if (state.loggedIn === true) {
-    window.location ="../views/create_event.html";
+    if (/index/.test(window.location.href)) {
+      window.location ="./views/create_event.html";
+    } else {
+      window.location ="../views/create_event.html";
+    }
   } else {
     alert('You must be logged in to create an event!');
+  }
+}
+
+function logout() {
+  let state = JSON.parse(localStorage.State);
+  state.loggedIn = false;
+  localStorage.setItem('State', JSON.stringify(state));
+  if (/index/.test(window.location.href)) {
+    location.reload();
+  } else {
+    window.location.href ="../index.html";
   }
 }
 
