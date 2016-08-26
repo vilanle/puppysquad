@@ -35,247 +35,301 @@
   </head>
 
   <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top topnav" role="navigation">
+      <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <img class="logo" src="../img/logo.png"></img>
+          <div class="app-name"><a href="../index.html">Puppy Squad</a></div>
+          <div class="subtitle">"San Diego's Premiere Dog Meetup Site!"</div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right" id="loginnav">
+            <li>
+              <button type="button" class="btn" id="login" data-toggle="modal" data-target="#myModal">Login/Sign Up</button>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right" id="profilenav">
+              <li>
+                <a href="../views/profile_page.html">
+                  <img src="../img/profilePic.png" alt="Profile Picture" style="float:left; width:88px; height:81px">
+                </a>
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-primary">Jimmy Pesto</button>
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                          <li><a href="../views/profile_page.html">My Profile</a></li>
+                          <li><a href="../views/accS.html">Account Settings</a></li>
+                          <li><a href="../index.html">Logout</a></li>
+                      </ul>
+                  </div>
+              </li>
+          </ul>
+        </div>
 
-      <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-static-top topnav" role="navigation">
-          <div class="container topnav">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <img class="logo" src="../img/logo.png"></img>
-                  <div class="app-name"><a href="../index.html">Puppy Squad</a></div>
-                  <div class="subtitle">"San Diego's Premiere Dog Meetup Site!"</div>
-              </div>
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav navbar-right">
-                      <li>
-                        <button type="button" class="btn" id="login">Login/Sign Up</button>
+        <!-- /.navbar-collapse -->
+      </div>
 
-                      </li>
-                  </ul>
-              </div>
-              <!-- /.navbar-collapse -->
+      <div class="navigation-app">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left" id="puppynav">
+            <li>
+              <a href="index.html">Events</a>
+            </li>
+            <li>
+              <a href="./views/create_event.html">Create Event</a>
+            </li>
+            <li>
+              <a href="./views/about.html">About/FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" onclick="closelogin()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="modal-title">Login or Sign Up</h4>
           </div>
-
-          <div class="navigation-app">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                  </button>
+          <div class="modal-body">
+            <form action="test.asp" method="post" id="logininfo">
+              <div>
+                <td><label for="Email">Email</label></td>
+                <td><input id="email" type="text" name="Email" size="25"></td>
               </div>
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-left" id="puppynav">
-                      <li>
-                          <a href="../index.html">Events</a>
-                      </li>
-                      <li>
-                          <a href="create_event.html">Create Event</a>
-                      </li>
-                      <li>
-                          <a href="about.html">About/FAQ</a>
-                      </li>
-                  </ul>
+              <div>
+                <label for="c_password">Password</label>
+                <input id="password" type="password" name="c_password" size="25">
               </div>
-              <!-- /.navbar-collapse -->
+              <!-- Passwords Match, needs JS if implemented
+              <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Passwords Match
+              -->
+            </form>
+            <div class="signup">
+              <div id="signupquestion">
+                No Account? Sign Up <a onclick="signup()">Here</a>!
+              </div>
+              <div id="signup">
+                <a id="back-button" onclick="back()">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i> Back
+                </a>
+                <form action="test.asp" method="post" id="form-signup">
+                  <div>
+                    <td><label for="name">Full Name</label></td>
+                    <td><input id="signupname" type="type" name="name" size="25"></td>
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="signupemail" type="text" name="email" size="25">
+                  </div>
+                  <div>
+                    <label for="o_password">Password</label>
+                    <input id="signuppassword" type="password" name="o_password" size="25" placeholder="">
+                  </div>
+                  <div>
+                    <label for="n_password">Confirm Password</label>
+                    <input id="confirmpassword" type="password" name="n_password" size="25" placeholder="">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="confirmation">
+              Account made! Enjoy the site.
+            </div>
           </div>
-          <!-- /.container -->
-      </nav>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="loginbutton" onclick="login()">Login</button>
+            <button type="button" class="btn btn-primary" id="signupbutton" onclick="signupconfirm()">Sign Up</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
-<a name="about"></a>
-<div class="intro-header">
-  <div class ="container">
+  <a name="about"></a>
+  <div class="intro-header">
+    <div class ="container">
 
-      <div class="row">
-        <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-8">
 
-            <img src="./../img/Corgi2.jpg" id="Mainimg"/>
+              <img src="./../img/Corgi2.jpg" id="Mainimg"/>
 
-           <div class="row" id = "MainInfo">
-            <div class = "event-title">
-               <div class="col-lg-4">
-                 <h2 class="page-title">Corgi Meetup</h2>
-                 <h4 class="page-header">Hosted By: <a href="corgination.html">Corgi Nation</a></h4>
+             <div class="row" id = "MainInfo">
+              <div class = "event-title">
+                 <div class="col-lg-4">
+                   <h2 class="page-title">Corgi Meetup</h2>
+                   <h4 class="page-header">Hosted By: <a href="corgination.html">Corgi Nation</a></h4>
+                 </div>
                </div>
-             </div>
-             <!-- buttons -->
-             <div class="col-lg-4">
-                 <div class = "buttons">
-                       <button type="button" class="btn" id="Going">Going</button>
-                       <button type="button" class="btn" id="Maybe">Maybe</button>
+               <!-- buttons -->
+               <div class="col-lg-4">
+                   <div class = "buttons">
+                         <button type="button" class="btn" id="Going">Going</button>
+                         <button type="button" class="btn" id="Maybe">Maybe</button>
+                  </div>
+               </div>
+            </div>
+
+            <div class ="row" id="TimeAndLocation">
+              <div class = "col-lg-8">
+                <!-- DateTime -->
+                  <div class="col-lg-5">
+                    <div class ="event-time" id="DateTime">
+                          <h6>Date and Time:</h6>
+                          <h7> 8/25/2016
+                              <br>2:00 pm </h7>
+                     </div>
+                  </div>
+
+            <!-- location -->
+                <div class="col-lg-4">
+                  <div class="event-location" id="Location">
+                    <p>
+                      <h6>Location:</h6>
+                      <h7> Washington Park</h7>
+                    </p>
+                  </div>
                 </div>
              </div>
-          </div>
+           </div>
 
-          <div class ="row" id="TimeAndLocation">
-            <div class = "col-lg-8">
-              <!-- DateTime -->
-                <div class="col-lg-5">
-                  <div class ="event-time" id="DateTime">
-                        <h6>Date and Time:</h6>
-                        <h7> 8/25/2016
-                            <br>2:00 pm </h7>
+            <!--Price -->
+            <div class ="row" id="PriceBreed">
+              <div class = "col-lg-8">
+              <!-- Price -->
+                <div class="col-lg-4">
+                 <div class ="event-price" id="Price">
+          				       <h6>Price</h6>
+          				       <h7> Free </h7>
+                 </div>
+                </div>
+              </div>
+
+              <div class = "col-lg-4">
+                <!--breed -->
+                <div class = "event-breed" id="breed">
+                   <h6>Breed or Size:</h6>
+                   <h7>Corgi</h7>
+                 </div>
+               </div>
+           </div>
+
+            <div class = "row" id ="DetailInfo">
+              <!--Details -->
+                <div class="col-lg-10"
+                  <div class="details" id="details">
+                    <h5>Event Details:</h5>
+                    <h7>This will be literally the greatest Corgi
+                       event ever you better come I swear to God. It will
+                      actually be the most amazing thing that has ever happened
+                      to anyone in the entire universe. I'm pretty sure Corgi's
+                      are the greatest things ever.</h7>
                    </div>
                 </div>
 
-          <!-- location -->
-              <div class="col-lg-4">
-                <div class="event-location" id="Location">
-                  <p>
-                    <h6>Location:</h6>
-                    <h7> Washington Park</h7>
-                  </p>
-                </div>
-              </div>
-           </div>
-         </div>
-
-          <!--Price -->
-          <div class ="row" id="PriceBreed">
-            <div class = "col-lg-8">
-            <!-- Price -->
-              <div class="col-lg-4">
-               <div class ="event-price" id="Price">
-        				       <h6>Price</h6>
-        				       <h7> Free </h7>
-               </div>
-              </div>
-            </div>
-
-            <div class = "col-lg-4">
-              <!--breed -->
-              <div class = "event-breed" id="breed">
-                 <h6>Breed or Size:</h6>
-                 <h7>Corgi</h7>
-               </div>
-             </div>
-         </div>
-
-          <div class = "row" id ="DetailInfo">
-            <!--Details -->
-              <div class="col-lg-10"
-                <div class="details" id="details">
-                  <h5>Event Details:</h5>
-                  <h7>This will be literally the greatest Corgi
-                     event ever you better come I swear to God. It will
-                    actually be the most amazing thing that has ever happened
-                    to anyone in the entire universe. I'm pretty sure Corgi's
-                    are the greatest things ever.</h7>
-                 </div>
-              </div>
-
-            <!--Attendence -->
-              <div class ="row" id="attendenceRow">
-                <div class ="AttendenceList">
-                    <div class="col-lg-4">
-            		 	  	<div class="attendees">
-                        <h4 class="AttendenceHeader">Attendence: 25 PuppyPals</h4>
-            				   	<ul>
-            				   		<li>
-            						   <img src="../img/bob.jpg" height="42" width="42" />
-            								Bob Belcher</li>
-            				   		<li>
-            						   <img src="../img/JimmyJr.png" height="42" width="42" />
-            						   Jimmy Jr.</li>
-            				   		<li>
-            						   <img src="../img/Tina.png" height="42" width="42"/>
-            						       Tina Belcher</li>
-            				   	</ul>
-            					</div>
-                    </div>
-                  </div>
-
-
-
-
-                  <div class = "MaybeList">
-                   <div class="col-lg-4">
-              		 		  <div class="Maybe">
-                         <h4 class="MaybeHeader">Maybe:</h4>
+              <!--Attendence -->
+                <div class ="row" id="attendenceRow">
+                  <div class ="AttendenceList">
+                      <div class="col-lg-4">
+              		 	  	<div class="attendees">
+                          <h4 class="AttendenceHeader">Attendence: 25 PuppyPals</h4>
               				   	<ul>
               				   		<li>
-              						   <img src="../img/Linda.jpeg" height="42" width="42" />
-              								Linda Belcher</li>
+              						   <img src="../img/bob.jpg" height="42" width="42" />
+              								Bob Belcher</li>
               				   		<li>
-              						   <img src="../img/JimmyPesto.png" height="42" width="42" />
-              						   Jimmy Pesto</li>
+              						   <img src="../img/JimmyJr.png" height="42" width="42" />
+              						   Jimmy Jr.</li>
               				   		<li>
-              						   <img src="../img/Zeek.jpg" height="42" width="42"/>
-              						      Zeek</li>
-            				    </div>
+              						   <img src="../img/Tina.png" height="42" width="42"/>
+              						       Tina Belcher</li>
+              				   	</ul>
+              					</div>
+                      </div>
+                    </div>
+
+
+
+
+                    <div class = "MaybeList">
+                     <div class="col-lg-4">
+                		 		  <div class="Maybe">
+                           <h4 class="MaybeHeader">Maybe:</h4>
+                				   	<ul>
+                				   		<li>
+                						   <img src="../img/Linda.jpeg" height="42" width="42" />
+                								Linda Belcher</li>
+                				   		<li>
+                						   <img src="../img/JimmyPesto.png" height="42" width="42" />
+                						   Jimmy Pesto</li>
+                				   		<li>
+                						   <img src="../img/Zeek.jpg" height="42" width="42"/>
+                						      Zeek</li>
+              				    </div>
+                      </div>
                     </div>
                   </div>
-                </div>
 
 
-            <!-- Comments -->
-            <div class ="row" id="commentRow">
-            				<div class="comments">
-            				  <div class="col-lg-10">
-                        <h4 class ="CommentsHeader">Comments:</h4>
-            					   <ul class="commentList">
-            						  <li>
-            							  <img src="../img/bob.jpg" height="42" width="42" />
-            							  <h6>Bob Belcher:</h6>
-                            <span>This event looks awesome!</span>
-            						  </li>
-            						 <li>
-            							<img src="../img/bob.jpg" height="42" width="42" />
-                          <h6>Bob Belcher:</h6>
-                          <span>Do you need me to cater this event?</span>
-            						 </li>
-            					   </ul>
-            				</div>
-            		  </div>
-                </div>
-    <!-- End of left column -->
-      </div>
+              <!-- Comments -->
+              <div class ="row" id="commentRow">
+              				<div class="comments">
+              				  <div class="col-lg-10">
+                          <h4 class ="CommentsHeader">Comments:</h4>
+              					   <ul class="commentList">
+              						  <li>
+              							  <img src="../img/bob.jpg" height="42" width="42" />
+              							  <h6>Bob Belcher:</h6>
+                              <span>This event looks awesome!</span>
+              						  </li>
+              						 <li>
+              							<img src="../img/bob.jpg" height="42" width="42" />
+                            <h6>Bob Belcher:</h6>
+                            <span>Do you need me to cater this event?</span>
+              						 </li>
+              					   </ul>
+              				</div>
+              		  </div>
+                  </div>
+      <!-- End of left column -->
+        </div>
 
-       <!-- Map -->
-             <div class="col-lg-4">
-              <div id="map"></div>
-            </div>
+         <!-- Map -->
+               <div class="col-lg-4">
+                <div id="map"></div>
+              </div>
 
 
-<!-- Row -->
-      </div>
-<!--Container -->
-   </div>
- <!--Intro Header -->
-</div>
+  <!-- Row -->
+        </div>
+  <!--Container -->
+     </div>
+   <!--Intro Header -->
+  </div>
 
-<!-- Main Body -->
-</body>
-	<!-- Footer -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<ul class="list-inline">
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li class="footer-menu-divider">&sdot;</li>
-						<li>
-							<a href="#about">About</a>
-						</li>
-						<li class="footer-menu-divider">&sdot;</li>
-						<li>
-							<a href="#services">Services</a>
-						</li>
-						<li class="footer-menu-divider">&sdot;</li>
-						<li>
-							<a href="#contact">Contact</a>
-						</li>
-					</ul>
-					<p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+  <!-- Main Body -->
+  </body>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv460IEdNuuTaGtHUXOAPuTF8O5K7Xpx0&callback=initMap&libraries=places"
   async defer></script>
@@ -283,11 +337,11 @@
 
 	<!-- jQuery -->
 	<script src="../js/jquery.js"></script>
-
+  <script src="../js/state.js"></script>
+  <script src="../js/signup.js"></script>
 
  <!-- custon JS -->
  <script src="../js/map.js"></script>
- <script src="../js/signup.js"></script>
 
 
 	<!-- Bootstrap Core JavaScript -->

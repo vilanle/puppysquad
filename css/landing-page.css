@@ -283,27 +283,3 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
-#signup {
-  display:none;
-}
-
-#signupbutton {
-  display: none;
-}
-
-#back-button {
-  bottom-padding: 10px;
-}
-
-#form-signup {
-  text-align: center;
-}
-
-#logininfo, #signupquestion{
-  text-align: center;
-}
-
-#confirmation {
-  display: none;
-}
