@@ -1,66 +1,24 @@
-///////////////////////////  Set Up Initial Database  //////////////////////////
-'use strict';
+for (let i = 0; i < events.length; i++) {
+  let event = events[i];
+  let nocasespace = event.title.replace(/\s+/g, '').toLowerCase();
 
-const initialState = {
-  loggedIn: false,
-  currentUser: {
-    name: '',
-    email: '',
-    password: '',
-    createdEvents: [],
-    goingEvents: [],
-    maybeEvents: []
-  }
-};
-const initialAccounts = [
-  {
-    name: 'Demo Account',
-    email: 'demo@gmail.com',
-    password: 'demo',
-    createdEvents: [],
-    goingEvents: [],
-    maybeEvents: []
-  }
-];
-const initialEvents = [
-  {
-    title: 'Corgi Meetup',
-    date: '09/16/16',
-    time: '11:00AM',
-    breed: 'corgi',
-    dogSize: 'medium',
-    location: 'Doyle Park, San Diego',
-    price: 'free',
-    description: 'Come meet awesome corgis!',
-    image: './img/corgi.jpg',
-    going: [],
-    maybe: []
-  }
-];
-const initialFilters = {
-  breed: '',
-  dogSize: '',
-  date: '',
-  price: '',
-  distanceFrom: '',
-  location: ''
-};
-const initialSearched = '';
-
-localStorage.clear();
-
-if (!localStorage.State) {
-  localStorage.setItem('State', JSON.stringify(initialState));
-} if (!localStorage.Accounts) {
-  localStorage.setItem('Accounts', JSON.stringify(initialAccounts));
-} if (!localStorage.Events) {
-  localStorage.setItem('Events', JSON.stringify(initialEvents));
-} if (!localStorage.Filters) {
-  localStorage.setItem('Filters', JSON.stringify(initialFilters));
-} if (!localStorage.Searched) {
-  localStorage.setItem('Searched', JSON.stringify(initialSearched));
+  $( "#eventschild" ).append(
+      "<div class='event' id='" + JSON.stringify(event) + "'>" +
+        "<img src='"+ event.image +"' class='event-image'></img>" +
+        "<div class='event-title'>"+ event.title +"</div>" +
+        "<div class='event-time'>"+ event.date +
+        "<br><span>"+ event.time +"</span></div>" +
+      "</div>"
+  );
 }
-////////////////////////////////////////////////////////////////////////////////
+
+$( ".event" ).click(function( event ) {
+  console.log(event.target.id);
+  localStorage.setItem('CurrentEvent', event.target.id);
+
+  location.replace('./views/EventViewer.html');
+});
+
 
 //  Possible Search Filtering Implementation  //
 

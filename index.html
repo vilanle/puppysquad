@@ -38,12 +38,31 @@
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right" id="loginnav">
           <li>
             <button type="button" class="btn" id="login" data-toggle="modal" data-target="#myModal">Login/Sign Up</button>
           </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right" id="profilenav">
+            <li>
+              <a href="./views/profile_page.html">
+                <img src="./img/profilePic.png" alt="Profile Picture" style="float:left; width:88px; height:81px">
+              </a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Jimmy Pesto</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="./views/profile_page.html">My Profile</a></li>
+                        <li><a href="./views/accS.html">Account Settings</a></li>
+                        <li><a href="./index.html">Logout</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
       </div>
+
       <!-- /.navbar-collapse -->
     </div>
 
@@ -220,41 +239,7 @@
 
             <div class="row" id="events">
               <div class="col-lg-12" id="eventschild">
-                <a href="./views/EventViewer.html"><div class="event" id="corgimeetup">
-                  <img src="img/corgi.jpg" class="event-image"></img>
-                  <div class="event-title">Corgi Meetup</div>
-                  <div class="event-time" id="today">Today
-                    <br><span>12:00PM</span>
-                  </div>
-                </div></a>
-                <a href="./views/EventViewer.html"><div class="event" id="adoptionmeetup">
-                  <img src="img/humane.jpg" class="event-image"></img>
-                  <div class="event-title">Adoption Meetup</div>
-                  <div class="event-time" id="today">Today
-                    <br><span>10:00AM</span>
-                  </div>
-                </div></a>
-                <a href="./views/EventViewer.html"><div class="event" id="puppypubcrawl">
-                  <img src="img/pub.jpg" class="event-image"></img>
-                  <div class="event-title">Puppy Pup Crawl</div>
-                  <div class="event-time" id="">9/05/16
-                    <br><span>8:00PM</span>
-                  </div>
-                </div></a>
-                <a href="./views/EventViewer.html"><div class="event" id="petcoconvention">
-                  <img src="img/petco.png" class="event-image"></img>
-                  <div class="event-title">Petco Convention</div>
-                  <div class="event-time">9/10/16
-                    <br><span>9:00AM</span>
-                  </div>
-                </div></a>
-                <a href="./views/EventViewer.html"><div class="event" id="fluffytherapy">
-                  <img src="img/therapy.jpg" class="event-image"></img>
-                  <div class="event-title">Fluffy Therapy</div>
-                  <div class="event-time">9/12/16
-                    <br><span>2:00PM</span>
-                  </div>
-                </div></a>
+                <!-- Filled in with JavaScript -->
               </div>
             </div>
 
@@ -272,7 +257,6 @@
     <!-- /.intro-header -->
 
     <script src="js/map.js"></script>
-    <script src="js/index.js"></script>
     <script src="js/signup.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv460IEdNuuTaGtHUXOAPuTF8O5K7Xpx0&callback=initMap&libraries=places"
@@ -280,6 +264,8 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/index.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
