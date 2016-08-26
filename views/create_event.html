@@ -133,11 +133,11 @@
          <form>
             <div class="patrick row">
           <div class="col-lg-2">
-            <label for="example-text-input"> Event Title:<font color="red">*</font></label>
+            <label for="example-text-input" > Event Title:<font color="red">*</font></label>
             </div>
 
           <div class="col-lg-6">
-                <input class="form-control" required= "true" type="text" id="example-text-input">
+                <input class="form-control" id= "event_title" required= "true" type="text" id="example-text-input">
             </div>
 
             <div class="col-lg-4">
@@ -149,10 +149,10 @@
 
             <div class="patrick row">
                           <div class="col-lg-2">
-            <label for="example-date-input">Date:<font color="red">*</font></label>
+            <label for="example-date-input" >Date:<font color="red">*</font></label>
             </div>
                       <div class="col-lg-6">
-                <input class="form-control" type="date" id="example-date-input">
+                <input class="form-control" type="date" id="event_date">
             </div>
 </div>
          <br> </br>
@@ -160,29 +160,29 @@
             <form class="form-inline">
                 <div class="patrick">
                               <div class="col-lg-2">
-                    <label for="breed">Breed:</label>
+                    <label for="breed" >Breed:</label>
                     </div>
                               <div class="col-lg-4">
-                    <select class="form-control" id="sel1">
-                        <option selected="selected">Select Breed</option>
-                        <option>Beagle</option>
-                        <option>Corgi</option>
-                        <option>French Bulldog</option>
-                        <option>Great Dane</option>
+                    <select  class="form-control" id="breed">
+                        <option selected="selected" value= "None" >Select Breed</option>
+                        <option value = "Beagle">Beagle</option>
+                        <option  value = "Corgi" >Corgi</option>
+                        <option  value = "Frenchie" >French Bulldog</option>
+                        <option value = "Great Dane">Great Dane</option>
                     </select>
                     </div>
                 </div>
 
                 <div class="patrick">
                                                   <div class="col-lg-2">
-                    <label for="breed">Dog Size:</label>
+                    <label for="breed" >Dog Size:</label>
                     </div>
                                                   <div class="col-lg-4">
-                    <select class="form-control" id="sel1">
-                        <option selected="selected">Select Dog Size</option>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
+                    <select class="form-control" id="dog_size" >
+                        <option selected="selected" value="none" >Select Dog Size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
                     </select>
                 </div>
                 </div>
@@ -196,8 +196,8 @@
                 <label for="example-date-input">Location:<font color="red">*</font></label>
                 </div>
                                           <div class="col-lg-6">
-                    <input class="form-control" type="text" id="example-date-input" placeholder="Address">
-                    <input class="form-control" type="text" id="example-date-input" placeholder="City, State, Zipcode">
+                    <input class="form-control" type="text" id="first_a" placeholder="Address">
+                    <input class="form-control" type="text" id="second_a" placeholder="City, State, Zipcode">
             </div>
             </div>
 
@@ -207,12 +207,12 @@
                  <label for="example-date-input">Price:</label>
                  </div>
                                            <div class="col-lg-3">
-                  <select class="form-control" id="sel1">
-                    <option selected="selected">Select Price</option>
-                    <option>Free</option>
-                    <option>$</option>
-                    <option>$$</option>
-                    <option>$$$</option>
+                  <select class="form-control" id="price">
+                    <option selected="selected" value="Free">Select Price</option>
+                    <option value="Free" >Free</option>
+                    <option value="low">$</option>
+                    <option value="medium">$$</option>
+                    <option value="high" >$$$</option>
                   </select>
             </div>
             </div>
@@ -224,13 +224,13 @@
             <label for="description">Event Description:<font color="red">*</font></label>
             </div>
                                      <div class="col-lg-8">
-            <textarea class="form-control" id="exampleTextarea" rows="7"></textarea>
+            <textarea class="form-control" id="event_description" rows="7"></textarea>
         </div>
         </div>
 
 <br></br>
 
-  <button type="submit" class="btn btn-primary pull-right">Publish Event</button>
+  <button type="submit" onclick = "store()" class="btn btn-primary pull-right">Publish Event</button>
          </form>
 </div>
           </div>
@@ -255,6 +255,8 @@
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
+
+            <script src="../js/create_event.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
@@ -321,6 +323,8 @@ $(function() {
 });
 
         </script>
+
+
 
 </body>
 
