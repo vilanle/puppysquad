@@ -107,11 +107,11 @@
             <form action="test.asp" method="post" id="logininfo">
               <div>
                 <td><label for="Email">Email</label></td>
-                <td><input type="text" name="Email" size="25"></td>
+                <td><input id="email" type="text" name="Email" size="25"></td>
               </div>
               <div>
                 <label for="c_password">Password</label>
-                <input type="password" name="c_password" size="25">
+                <input id="password" type="password" name="c_password" size="25">
               </div>
               <!-- Passwords Match, needs JS if implemented
               <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Passwords Match
@@ -128,19 +128,19 @@
                 <form action="test.asp" method="post" id="form-signup">
                   <div>
                     <td><label for="name">Full Name</label></td>
-                    <td><input type="type" name="name" size="25"></td>
+                    <td><input id="signupname" type="type" name="name" size="25"></td>
                   </div>
                   <div>
                     <label for="email">Email</label>
-                    <input type="text" name="email" size="25">
+                    <input id="signupemail" type="text" name="email" size="25">
                   </div>
                   <div>
                     <label for="o_password">Password</label>
-                    <input type="password" name="o_password" size="25" placeholder="">
+                    <input id="signuppassword" type="password" name="o_password" size="25" placeholder="">
                   </div>
                   <div>
                     <label for="n_password">Confirm Password</label>
-                    <input type="password" name="n_password" size="25" placeholder="">
+                    <input id="confirmpassword" type="password" name="n_password" size="25" placeholder="">
                   </div>
                 </form>
               </div>
@@ -150,7 +150,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" id="loginbutton">Login</button>
+            <button type="button" class="btn btn-primary" id="loginbutton" onclick="login()">Login</button>
             <button type="button" class="btn btn-primary" id="signupbutton" onclick="signupconfirm()">Sign Up</button>
           </div>
         </div><!-- /.modal-content -->

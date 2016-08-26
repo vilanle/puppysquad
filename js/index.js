@@ -20,6 +20,7 @@ $( ".event" ).click(function( event ) {
 });
 
 
+
 //  Possible Search Filtering Implementation  //
 
 // const eventTitle = {
