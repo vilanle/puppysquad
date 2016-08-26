@@ -69,6 +69,17 @@ function signupconfirm() {
   let accounts = JSON.parse(localStorage.Accounts);
   let state = JSON.parse(localStorage.State);
 
+  // Check if any inputs empty
+  if (signupname === '') {
+    signuperror(3);
+  }
+  if (signupemail === '') {
+    signuperror(2);
+  }
+  if (signuppassword === '') {
+    signuperror(4);
+  }
+  
   // Password match check
   if(signuppassword !== confirmpassword) {
     signuperror(0);
@@ -137,6 +148,15 @@ function signuperror(number) {
       break;
     case 1:
       alert('Email already taken. Try again.');
+      break;
+    case 2:
+      alert('Email section cannot be empty. Try again.');
+      break;
+    case 3:
+      alert('Name section cannot be empty. Try again.');
+      break;
+    case 4:
+      alert('Password section cannot be empty. Try again.');
       break;
     default:
       alert('Something went wrong.');
