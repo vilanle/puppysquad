@@ -178,17 +178,17 @@
 
           <div class="input-group">
             <label style="display:inline" for="name">Full Name</label>
-            <input type="text" name="name" class="form-control" style="background-color: #f1f1f1; width:109%">
+            <input id="account-name" type="text" name="name" class="form-control" style="background-color: #f1f1f1; width:109%">
           </div>
 
           <div class="input-group" style="padding-top: 10px">
             <label style="display:inline" for="email">Email</label>
-            <input type="text" name="email" class="form-control" style="background-color: #f1f1f1; width:124%">
+            <input id="account-email" type="text" name="email" class="form-control" style="background-color: #f1f1f1; width:124%">
           </div>
 
           <div class="input-group" style="padding-top: 10px">
             <label style="display:inline; padding-bottom: 10px;" for="o_password">Current Password</label>
-            <input type="password" name="o_password" class="form-control" placeholder="Required to Change Password" style="background-color: #f1f1f1;">
+            <input id="account-current-password" type="password" name="o_password" class="form-control" placeholder="Required to Change Password" style="background-color: #f1f1f1;">
           </div>
 
           <div class="input-group" style="padding-top: 10px">
@@ -208,7 +208,7 @@
           <span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;"></span> Passwords Match
         -->
           <div style="text-align: center; padding-top: 10px;">
-              <input type="submit" name="save" value="Save Changes">
+            <input id="account-submit" onclick="saveAccountSettings()" type="submit">
           </div>
 
         </form>
@@ -218,6 +218,8 @@
     <script src="../js/jquery.js"></script>
     <script src="../js/state.js"></script>
 		<script src="../js/signup.js"></script>
+    <script src="../js/accountSettings.js"></script>
+
         <!-- Custom JS -->
     <script src="../js/password.js"></script>
 

@@ -1,20 +1,4 @@
 
-function checkPasswordMatch() {
-    var password = $("#npass").val();
-    var confirmPassword = $("#cpass").val();
-
-    if (password != confirmPassword)
-        $("#divCheckPasswordMatch").html("Passwords do not match!");
-    else
-        $("#divCheckPasswordMatch").html("Passwords match.");
-}
-
-$(accS.html).ready(function () {
-   $("#npass, #cpass").keyup(checkPasswordMatch);
-});
-
-
-
 /////////////////Script for other Password Verification//////
 /*$("input[type=password]").keyup(function(){
 	if($("#npass").val() == $("#cpass").val()){
