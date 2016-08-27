@@ -54,18 +54,18 @@
           <ul class="nav navbar-nav navbar-right" id="profilenav">
               <li>
                 <a href="../views/profile_page.html">
-                  <img src="../img/profilePic.png" alt="Profile Picture" style="float:left; width:88px; height:81px">
+                  <img id="profile-pic" alt="Profile Picture" style="float:left; width:88px; height:81px">
                 </a>
                   <div class="btn-group">
-                      <button type="button" class="btn btn-primary">Jimmy Pesto</button>
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                          <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu">
-                          <li><a href="../views/profile_page.html">My Profile</a></li>
-                          <li><a href="../views/accS.html">Account Settings</a></li>
-                          <li><a onclick="logout()">Logout</a></li>
-                      </ul>
+                    <button type="button" id="profile-name" class="btn btn-primary"></button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../views/profile_page.html">My Profile</a></li>
+                        <li><a href="../views/accS.html">Account Settings</a></li>
+                        <li><a onclick="logout()">Logout</a></li>
+                    </ul>
                   </div>
               </li>
           </ul>

@@ -9,7 +9,8 @@ const initialState = {
     password: '',
     createdEvents: [],
     goingEvents: [],
-    maybeEvents: []
+    maybeEvents: [],
+    picture: './img/profilePic.png'
   }
 };
 const initialAccounts = [
@@ -19,7 +20,8 @@ const initialAccounts = [
     password: 'demo',
     createdEvents: [],
     goingEvents: [],
-    maybeEvents: []
+    maybeEvents: [],
+    picture: './img/profilePic.png'
   }
 ];
 const initialEvents = [
@@ -124,6 +126,13 @@ let searched = JSON.parse(localStorage.Searched);
 let currentEvent = JSON.parse(localStorage.CurrentEvent);
 
 if (state.loggedIn) {
+  if(/index/.test(window.location.href)) {
+    $('#profile-pic').attr('src', state.currentUser.picture);
+  } else if(!(/index/.test(window.location.href))) {
+    $('#profile-pic').attr('src', '.' + state.currentUser.picture);
+  }
+  $('#profile-name').text(state.currentUser.name);
+
   $('#loginnav').hide();
   $('#profilenav').show();
 } else {

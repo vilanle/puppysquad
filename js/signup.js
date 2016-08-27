@@ -79,7 +79,7 @@ function signupconfirm() {
   if (signuppassword === '') {
     signuperror(4);
   }
-  
+
   // Password match check
   if(signuppassword !== confirmpassword) {
     signuperror(0);
