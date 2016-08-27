@@ -4,13 +4,68 @@
 const initialState = {
   loggedIn: false,
   currentUser: {
-    name: '',
-    email: '',
-    password: '',
+    name: 'Demo Account',
+    email: 'demo@gmail.com',
+    password: 'demo',
     createdEvents: [],
-    goingEvents: [],
+    goingEvents: [
+      {
+        title: 'Corgi Meetup',
+        date: '09/16/16',
+        time: '11:00AM',
+        breed: 'corgi',
+        dogSize: 'medium',
+        location: 'Doyle Park, San Diego',
+        price: 'free',
+        description: 'Come meet awesome corgis!',
+        image: './img/corgi.jpg',
+        going: [
+          {
+            name: 'Tina',
+            picture: "../img/Tina.png"
+          },
+          {
+            name: 'Jimmy Jr.',
+            picture: "../img/JimmyJr.png"
+          },
+          {
+            name: 'Bob Belcher',
+            picture: "../img/bob.jpg"
+          }
+        ],
+        maybe: [
+          {
+            name: 'Linda Belcher',
+            picture: "../img/Linda.jpeg"
+          }
+        ],
+        hostedBy: 'Corgi Nation',
+        comments: [
+          {
+            name: 'Bob Belcher',
+            time: '09/03/16',
+            message: 'This event looks awesome!'
+          },
+          {
+            name: 'Tina',
+            time: '09/03/16',
+            message: 'I have ten corgis!'
+          }
+        ]
+      }
+    ],
     maybeEvents: [],
-    picture: './img/profilePic.png'
+    picture: './img/profilePic.png',
+    myDogs: [
+      {
+        name: 'Lucky',
+        picture: "../img/puppy.jpg"
+      },
+      {
+        name: 'Journey',
+        picture: "../img/therapy.jpg"
+      }
+    ]
   }
 };
 const initialAccounts = [
@@ -19,9 +74,64 @@ const initialAccounts = [
     email: 'demo@gmail.com',
     password: 'demo',
     createdEvents: [],
-    goingEvents: [],
+    goingEvents: [
+      {
+        title: 'Corgi Meetup',
+        date: '09/16/16',
+        time: '11:00AM',
+        breed: 'corgi',
+        dogSize: 'medium',
+        location: 'Doyle Park, San Diego',
+        price: 'free',
+        description: 'Come meet awesome corgis!',
+        image: './img/corgi.jpg',
+        going: [
+          {
+            name: 'Tina',
+            picture: "../img/Tina.png"
+          },
+          {
+            name: 'Jimmy Jr.',
+            picture: "../img/JimmyJr.png"
+          },
+          {
+            name: 'Bob Belcher',
+            picture: "../img/bob.jpg"
+          }
+        ],
+        maybe: [
+          {
+            name: 'Linda Belcher',
+            picture: "../img/Linda.jpeg"
+          }
+        ],
+        hostedBy: 'Corgi Nation',
+        comments: [
+          {
+            name: 'Bob Belcher',
+            time: '09/03/16',
+            message: 'This event looks awesome!'
+          },
+          {
+            name: 'Tina',
+            time: '09/03/16',
+            message: 'I have ten corgis!'
+          }
+        ]
+      }
+    ],
     maybeEvents: [],
-    picture: './img/profilePic.png'
+    picture: './img/profilePic.png',
+    myDogs: [
+      {
+        name: 'Lucky',
+        picture: "../img/puppy.jpg"
+      },
+      {
+        name: 'Journey',
+        picture: "../img/therapy.jpg"
+      }
+    ]
   }
 ];
 const initialEvents = [
@@ -255,7 +365,7 @@ const initialClickedEvent = {
     }
   ]
 };
-
+// 
 // localStorage.clear();
 
 if (!localStorage.State) {
