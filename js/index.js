@@ -4,18 +4,18 @@ for (let i = 0; i < events.length; i++) {
 
   $( "#eventschild" ).append(
       "<div class='event' id='" + JSON.stringify(event) + "'>" +
-        "<img src='"+ event.image +"' class='event-image'></img>" +
-        "<div class='event-title'>"+ event.title +"</div>" +
-        "<div class='event-time'>"+ event.date +
+        "<img id='" + JSON.stringify(event) + "' src='"+ event.image +"' class='event-image'></img>" +
+        "<div id='"+ JSON.stringify(event) +"'class='event-title'>"+ event.title +"</div>" +
+        "<div id='"+ JSON.stringify(event) +"'class='event-time'>"+ event.date +
         "<br><span>"+ event.time +"</span></div>" +
       "</div>"
   );
 }
 
 $( ".event" ).click(function( event ) {
-  console.log(event.target.id);
+  console.log(event);
   localStorage.setItem('CurrentEvent', event.target.id);
-
+  console.log(event.target.id);
   location.replace('./views/EventViewer.html');
 });
 

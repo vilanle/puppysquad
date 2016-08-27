@@ -35,8 +35,39 @@ const initialEvents = [
     price: 'free',
     description: 'Come meet awesome corgis!',
     image: './img/corgi.jpg',
-    going: [],
-    maybe: []
+    going: [
+      {
+        name: 'Tina',
+        picture: "../img/Tina.png"
+      },
+      {
+        name: 'Jimmy Jr.',
+        picture: "../img/JimmyJr.png"
+      },
+      {
+        name: 'Bob Belcher',
+        picture: "../img/bob.jpg"
+      }
+    ],
+    maybe: [
+      {
+        name: 'Linda Belcher',
+        picture: "../img/Linda.jpeg"
+      }
+    ],
+    hostedBy: 'Corgi Nation',
+    comments: [
+      {
+        name: 'Bob Belcher',
+        time: '09/03/16',
+        message: 'This event looks awesome!'
+      },
+      {
+        name: 'Tina',
+        time: '09/03/16',
+        message: 'I have ten corgis!'
+      }
+    ]
   },
   {
     title: 'Adoption Meetup',
@@ -48,8 +79,39 @@ const initialEvents = [
     price: 'free',
     description: 'Come meet your new best friend!',
     image: './img/humane.jpg',
-    going: [],
-    maybe: []
+    going: [
+      {
+        name: 'Tina',
+        picture: "../img/Tina.png"
+      },
+      {
+        name: 'Jimmy Jr.',
+        picture: "../img/JimmyJr.png"
+      },
+      {
+        name: 'Bob Belcher',
+        picture: "../img/bob.jpg"
+      }
+    ],
+    maybe: [
+      {
+        name: 'Linda Belcher',
+        picture: "../img/Linda.jpeg"
+      }
+    ],
+    hostedBy: 'Humane Society of San Diego',
+    comments: [
+      {
+        name: 'Bob Belcher',
+        time: '09/03/16',
+        message: 'This event looks awesome!'
+      },
+      {
+        name: 'Tina',
+        time: '09/03/16',
+        message: 'I have ten corgis!'
+      }
+    ]
   },
   {
     title: 'Puppy Pub Crawl',
@@ -61,8 +123,39 @@ const initialEvents = [
     price: 'free',
     description: 'Explore local bars with your pup.',
     image: './img/pub.jpg',
-    going: [],
-    maybe: []
+    going: [
+      {
+        name: 'Tina',
+        picture: "../img/Tina.png"
+      },
+      {
+        name: 'Jimmy Jr.',
+        picture: "../img/JimmyJr.png"
+      },
+      {
+        name: 'Bob Belcher',
+        picture: "../img/bob.jpg"
+      }
+    ],
+    maybe: [
+      {
+        name: 'Linda Belcher',
+        picture: "../img/Linda.jpeg"
+      }
+    ],
+    hostedBy: 'Pattys Pub',
+    comments: [
+      {
+        name: 'Bob Belcher',
+        time: '09/03/16',
+        message: 'This event looks awesome!'
+      },
+      {
+        name: 'Tina',
+        time: '09/03/16',
+        message: 'I have ten corgis!'
+      }
+    ]
   },
   {
     title: 'Petco Convention',
@@ -74,8 +167,39 @@ const initialEvents = [
     price: '$',
     description: 'Get discounts on stocked items and attend a puppy and me game.',
     image: './img/petco.png',
-    going: [],
-    maybe: []
+    going: [
+      {
+        name: 'Tina',
+        picture: "../img/Tina.png"
+      },
+      {
+        name: 'Jimmy Jr.',
+        picture: "../img/JimmyJr.png"
+      },
+      {
+        name: 'Bob Belcher',
+        picture: "../img/bob.jpg"
+      }
+    ],
+    maybe: [
+      {
+        name: 'Linda Belcher',
+        picture: "../img/Linda.jpeg"
+      }
+    ],
+    hostedBy: 'Petco (Verified)',
+    comments: [
+      {
+        name: 'Bob Belcher',
+        time: '09/03/16',
+        message: 'This event looks awesome!'
+      },
+      {
+        name: 'Tina',
+        time: '09/03/16',
+        message: 'I have ten corgis!'
+      }
+    ]
   }
 ];
 const initialFilters = {
@@ -88,17 +212,48 @@ const initialFilters = {
 };
 const initialSearched = '';
 const initialClickedEvent = {
-    title: 'Puppy Pub Crawl',
-    date: '09/18/16',
-    time: '9:00PM',
-    breed: '',
-    dogSize: '',
-    location: 'Pattys Pub, San Diego',
-    price: 'free',
-    description: 'Explore local bars with your pup.',
-    image: './img/pub.jpg',
-    going: [],
-    maybe: []
+  title: 'Puppy Pub Crawl',
+  date: '09/18/16',
+  time: '9:00PM',
+  breed: '',
+  dogSize: '',
+  location: 'Pattys Pub, San Diego',
+  price: 'free',
+  description: 'Explore local bars with your pup.',
+  image: './img/pub.jpg',
+  going: [
+    {
+      name: 'Tina',
+      picture: "../img/Tina.png"
+    },
+    {
+      name: 'Jimmy Jr.',
+      picture: "../img/JimmyJr.png"
+    },
+    {
+      name: 'Bob Belcher',
+      picture: "../img/bob.jpg"
+    }
+  ],
+  maybe: [
+    {
+      name: 'Linda Belcher',
+      picture: "../img/Linda.jpeg"
+    }
+  ],
+  hostedBy: 'Pattys Pub',
+  comments: [
+    {
+      name: 'Bob Belcher',
+      time: '09/03/16',
+      message: 'This event looks awesome!'
+    },
+    {
+      name: 'Tina',
+      time: '09/03/16',
+      message: 'I have ten corgis!'
+    }
+  ]
 };
 
 // localStorage.clear();
