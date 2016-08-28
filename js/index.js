@@ -6,8 +6,7 @@ for (let i = 0; i < events.length; i++) {
       "<div class='event " + event.breed + ' ' + event.dogSize + ' ' + event.dateString + ' ' + event.price + "' id='" + JSON.stringify(event) + "'>" +
         "<img id='" + JSON.stringify(event) + "' src='"+ event.image +"' class='event-image'></img>" +
         "<div id='"+ JSON.stringify(event) +"'class='event-title'>"+ event.title +"</div>" +
-        "<div id='"+ JSON.stringify(event) +"'class='event-time'>"+ event.date +
-        "<br><span>"+ event.time +"</span></div>" +
+        "<div id='"+ JSON.stringify(event) +"'class='event-time'>"+ event.date + "</div>" +
       "</div>"
   );
 }
