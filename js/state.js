@@ -11,7 +11,8 @@ const initialState = {
     goingEvents: [
       {
         title: 'Corgi Meetup',
-        date: '09/16/16',
+        date: new Date("September 19, 2016 11:13:00").toLocaleString('en-US'),
+        dateString: new Date("September 19, 2016 11:13:00").valueOf(),
         time: '11:00AM',
         breed: 'corgi',
         dogSize: 'medium',
@@ -77,7 +78,8 @@ const initialAccounts = [
     goingEvents: [
       {
         title: 'Corgi Meetup',
-        date: '09/16/16',
+        date: new Date("September 19, 2016 11:13:00").toLocaleString('en-US'),
+        dateString: new Date("September 19, 2016 11:13:00").valueOf(),
         time: '11:00AM',
         breed: 'corgi',
         dogSize: 'medium',
@@ -137,7 +139,8 @@ const initialAccounts = [
 const initialEvents = [
   {
     title: 'Corgi Meetup',
-    date: '09/16/16',
+    date: new Date("September 19, 2016 11:13:00").toLocaleString('en-US'),
+    dateString: new Date("September 19, 2016 11:13:00").valueOf(),
     time: '11:00AM',
     breed: 'corgi',
     dogSize: 'medium',
@@ -181,7 +184,8 @@ const initialEvents = [
   },
   {
     title: 'Adoption Meetup',
-    date: '09/17/16',
+    date: new Date("September 20, 2016 11:13:00").toLocaleString('en-US'),
+    dateString: new Date("September 20, 2016 11:13:00").valueOf(),
     time: '10:00AM',
     breed: '',
     dogSize: '',
@@ -225,7 +229,8 @@ const initialEvents = [
   },
   {
     title: 'Puppy Pub Crawl',
-    date: '09/18/16',
+    date: new Date("September 21, 2016 11:13:00").toLocaleString('en-US'),
+    dateString: new Date("September 21, 2016 11:13:00").valueOf(),
     time: '9:00PM',
     breed: '',
     dogSize: '',
@@ -269,12 +274,13 @@ const initialEvents = [
   },
   {
     title: 'Petco Convention',
-    date: '09/20/16',
+    date: new Date("September 22, 2016 11:13:00").toLocaleString('en-US'),
+    dateString: new Date("September 22, 2016 11:13:00").valueOf(),
     time: '11:00AM',
     breed: '',
     dogSize: '',
     location: 'Petco, La Jolla',
-    price: '$',
+    price: '10',
     description: 'Get discounts on stocked items and attend a puppy and me game.',
     image: './img/petco.png',
     going: [
@@ -323,7 +329,8 @@ const initialFilters = {
 const initialSearched = '';
 const initialClickedEvent = {
   title: 'Puppy Pub Crawl',
-  date: '09/18/16',
+  date: new Date("September 21, 2016 11:13:00").toLocaleString('en-US'),
+  dateString: new Date("September 21, 2016 11:13:00").valueOf(),
   time: '9:00PM',
   breed: '',
   dogSize: '',
@@ -365,7 +372,7 @@ const initialClickedEvent = {
     }
   ]
 };
-// 
+//
 // localStorage.clear();
 
 if (!localStorage.State) {

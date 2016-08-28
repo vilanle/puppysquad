@@ -5,7 +5,7 @@ $('#event-host').text('Hosted by: ' + currentEvent.hostedBy);
 $('#event-date').text(currentEvent.date);
 $('#event-time').text(currentEvent.time);
 $('#event-location').text(currentEvent.location);
-$('#event-price').text(currentEvent.price);
+$('#event-price').text('$ ' + currentEvent.price);
 $('#event-breed').text(currentEvent.breed);
 $('#event-dogSize').text(currentEvent.dogSize);
 $('#event-details').text(currentEvent.description);

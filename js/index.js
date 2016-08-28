@@ -3,7 +3,7 @@ for (let i = 0; i < events.length; i++) {
   let nocasespace = event.title.replace(/\s+/g, '').toLowerCase();
 
   $( "#eventschild" ).append(
-      "<div class='event' id='" + JSON.stringify(event) + "'>" +
+      "<div class='event " + event.breed + ' ' + event.dogSize + ' ' + event.dateString + ' ' + event.price + "' id='" + JSON.stringify(event) + "'>" +
         "<img id='" + JSON.stringify(event) + "' src='"+ event.image +"' class='event-image'></img>" +
         "<div id='"+ JSON.stringify(event) +"'class='event-title'>"+ event.title +"</div>" +
         "<div id='"+ JSON.stringify(event) +"'class='event-time'>"+ event.date +
@@ -13,9 +13,7 @@ for (let i = 0; i < events.length; i++) {
 }
 
 $( ".event" ).click(function( event ) {
-  console.log(event);
   localStorage.setItem('CurrentEvent', event.target.id);
-  console.log(event.target.id);
   location.replace('./views/EventViewer.html');
 });
 
