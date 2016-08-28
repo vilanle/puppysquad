@@ -101,8 +101,10 @@ function signupconfirm() {
     password: signuppassword,
     createdEvents: [],
     goingEvents: [],
-    maybeEvents: []
-  }
+    maybeEvents: [],
+    picture: './img/profilePic.png',
+    myDogs: []
+   }
 
   accounts.push(newUser);
   localStorage.setItem('Accounts', JSON.stringify(accounts));

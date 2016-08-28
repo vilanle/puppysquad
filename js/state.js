@@ -399,6 +399,7 @@ let currentEvent = JSON.parse(localStorage.CurrentEvent);
 
 if (state.loggedIn) {
   if(/index/.test(window.location.href)) {
+    if (state.currentUser.picture)
     $('#profile-pic').attr('src', state.currentUser.picture);
   } else if(!(/index/.test(window.location.href))) {
     $('#profile-pic').attr('src', '.' + state.currentUser.picture);
