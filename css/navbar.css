@@ -127,3 +127,12 @@ label {
 #myModal {
   font-size: 12pt;
 }
+
+#profile-pic{
+   margin:10px;
+   margin-bottom: 5px;
+}
+
+#profilenav > li{
+  text-align: left;
+}
