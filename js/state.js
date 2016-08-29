@@ -11,7 +11,7 @@ const initialState = {
     goingEvents: [
       {
         title: 'Corgi Meetup',
-        date: new Date("September 19, 2016 11:13:00").toLocaleString('en-US'),
+        date: new Date("September 19, 2016 11:13:00").toDateString(),
         dateString: new Date("September 19, 2016 11:13:00").valueOf(),
         time: '11:00AM',
         breed: 'corgi',
@@ -78,7 +78,7 @@ const initialAccounts = [
     goingEvents: [
       {
         title: 'Corgi Meetup',
-        date: new Date("September 19, 2016 11:13:00").toLocaleString('en-US'),
+        date: new Date("September 19, 2016 11:13:00").toDateString(),
         dateString: new Date("September 19, 2016 11:13:00").valueOf(),
         time: '11:00AM',
         breed: 'corgi',
@@ -139,7 +139,7 @@ const initialAccounts = [
 const initialEvents = [
   {
     title: 'Corgi Meetup',
-    date: new Date("September 19, 2016 11:13:00").toLocaleString('en-US'),
+    date: new Date("September 19, 2016 11:13:00").toDateString(),
     dateString: new Date("September 19, 2016 11:13:00").valueOf(),
     time: '11:00AM',
     breed: 'corgi',
@@ -184,7 +184,7 @@ const initialEvents = [
   },
   {
     title: 'Adoption Meetup',
-    date: new Date("September 20, 2016 11:13:00").toLocaleString('en-US'),
+    date: new Date("September 20, 2016 11:13:00").toDateString(),
     dateString: new Date("September 20, 2016 11:13:00").valueOf(),
     time: '10:00AM',
     breed: '',
@@ -229,7 +229,7 @@ const initialEvents = [
   },
   {
     title: 'Puppy Pub Crawl',
-    date: new Date("September 21, 2016 11:13:00").toLocaleString('en-US'),
+    date: new Date("September 21, 2016 11:13:00").toDateString(),
     dateString: new Date("September 21, 2016 11:13:00").valueOf(),
     time: '9:00PM',
     breed: '',
@@ -274,7 +274,7 @@ const initialEvents = [
   },
   {
     title: 'Petco Convention',
-    date: new Date("September 22, 2016 11:13:00").toLocaleString('en-US'),
+    date: new Date("September 22, 2016 11:13:00").toDateString(),
     dateString: new Date("September 22, 2016 11:13:00").valueOf(),
     time: '11:00AM',
     breed: '',
@@ -329,7 +329,7 @@ const initialFilters = {
 const initialSearched = '';
 const initialClickedEvent = {
   title: 'Puppy Pub Crawl',
-  date: new Date("September 21, 2016 11:13:00").toLocaleString('en-US'),
+  date: new Date("September 21, 2016 11:13:00").toDateString(),
   dateString: new Date("September 21, 2016 11:13:00").valueOf(),
   time: '9:00PM',
   breed: '',

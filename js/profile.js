@@ -36,7 +36,7 @@ for (let i = 0; i < currentUser.createdEvents.length; i++) {
   let event = currentUser.createdEvents[i];
   let nocasespace = event.title.replace(/\s+/g, '').toLowerCase();
 
-  $( "#eventschild" ).append(
+  $( "#created-events" ).append(
       "<div class='event' id='" + JSON.stringify(event) + "'>" +
         "<img id='" + JSON.stringify(event) + "' src='"+ "." + event.image +"' class='event-image'></img>" +
         "<div id='"+ JSON.stringify(event) +"'class='event-title'>"+ event.title +"</div>" +
