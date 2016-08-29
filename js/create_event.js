@@ -23,7 +23,7 @@
      location: address1 + ' ' + address2,
      price: price,
      description: event_description,
-     image: './img/pub.jpg',
+     image: './img/Corgi2.jpg',
      going: [],
      maybe: [],
      hostedBy: state.currentUser.name,
