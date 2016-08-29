@@ -34,12 +34,15 @@
    state.currentUser.createdEvents.push(newEvent);
    localStorage.setItem('State', JSON.stringify(state));
    localStorage.setItem('Events', JSON.stringify(events));
+   localStorage.setItem('CurrentEvent', JSON.stringify(newEvent));
+
 
    for(let i = 0; i < accounts.length; i++) {
      let account = accounts[i];
      if(account.email === state.currentUser.email) {
        accounts[i].createdEvents.push(newEvent);
        localStorage.setItem('Accounts', JSON.stringify(accounts));
+       location.replace('../views/EventViewer.html');
        return;
      }
    }
@@ -47,5 +50,5 @@
 
 function parseDate(s) {
   var b = s.split(/\D/);
-  return new Date(b[0], --b[1);
+  return new Date(b[0], --b[1], b[2]);
 }
