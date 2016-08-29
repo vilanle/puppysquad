@@ -55,5 +55,11 @@ function initMap() {
 
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
     infowindow.open(map, marker);
+
+    let events = JSON.parse(localStorage.Events);
+
+    $('.event').hide();
+    $('.corgi').show();
+
   });
 }

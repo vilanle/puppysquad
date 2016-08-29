@@ -373,7 +373,7 @@ const initialClickedEvent = {
   ]
 };
 //
-//localStorage.clear();
+// localStorage.clear();
 
 if (!localStorage.State) {
   localStorage.setItem('State', JSON.stringify(initialState));
