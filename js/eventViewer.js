@@ -40,3 +40,100 @@ for(let i = 0; i < currentEvent.comments.length; i++) {
     "</li>"
   );
 }
+
+$( "#going-button" ).click(function( event ) {
+
+  let currentEvent = JSON.parse(localStorage.CurrentEvent);
+  let accounts = JSON.parse(localStorage.Accounts);
+  let state = JSON.parse(localStorage.State);
+  let events = JSON.parse(localStorage.Events);
+
+  if(!state.loggedIn) {
+    alert('You must be logged in to attend!');
+    return;
+  }
+
+  for(let i = 0; i < state.currentUser.goingEvents.length; i++) {
+    let event = state.currentUser.goingEvents[i];
+    if(event.title === currentEvent.title) {
+      alert('Already attending event!');
+      return;
+    }
+  }
+
+  let goingUser = {
+    name: state.currentUser.name,
+    picture: '.' + state.currentUser.picture
+  };
+
+  currentEvent.going.push(goingUser)
+  localStorage.setItem('CurrentEvent', JSON.stringify(currentEvent));
+
+  for(let i = 0; i < accounts.length; i++) {
+    let account = accounts[i];
+    if(account.email === state.currentUser.email) {
+      accounts[i].goingEvents.push(currentEvent);
+      localStorage.setItem('Accounts', JSON.stringify(accounts));
+      break;
+    }
+  }
+
+  state.currentUser.goingEvents.push(currentEvent);
+  localStorage.setItem('State', JSON.stringify(state));
+
+  events.push(currentEvent);
+  localStorage.setItem('Events', JSON.stringify(events));
+
+  location.reload();
+});
+
+$( "#maybe-button" ).click(function( event ) {
+  let currentEvent = JSON.parse(localStorage.CurrentEvent);
+  let accounts = JSON.parse(localStorage.Accounts);
+  let state = JSON.parse(localStorage.State);
+  let events = JSON.parse(localStorage.Events);
+
+  if(!state.loggedIn) {
+    alert('You must be logged in to attend!');
+    return;
+  }
+
+  for(let i = 0; i < state.currentUser.maybeEvents.length; i++) {
+    let event = state.currentUser.maybeEvents[i];
+    if(event.title === currentEvent.title) {
+      alert('Already maybe attending the event!');
+      return;
+    }
+  }
+
+  let goingUser = {
+    name: state.currentUser.name,
+    picture: '.' + state.currentUser.picture
+  };
+
+  currentEvent.maybe.push(goingUser)
+  localStorage.setItem('CurrentEvent', JSON.stringify(currentEvent));
+
+  for(let i = 0; i < accounts.length; i++) {
+    let account = accounts[i];
+    if(account.email === state.currentUser.email) {
+      accounts[i].maybeEvents.push(currentEvent);
+      localStorage.setItem('Accounts', JSON.stringify(accounts));
+      break;
+    }
+  }
+
+  state.currentUser.maybeEvents.push(currentEvent);
+  localStorage.setItem('State', JSON.stringify(state));
+
+  for(let i = 0; i < events.length; i++) {
+    let event = events[i];
+    if(event.title === currentEvent.title) {
+      events[i] = currentEvent;
+      localStorage.setItem('Events', JSON.stringify(events));
+      break;
+    }
+  }
+
+  location.reload();
+});
