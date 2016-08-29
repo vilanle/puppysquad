@@ -12,6 +12,7 @@ function login() {
   let password = $('#password').val();
   let accounts = JSON.parse(localStorage.Accounts);
   let state = JSON.parse(localStorage.State);
+  let noemail = true;
 
   for(let i = 0; i < accounts.length; i++) {
     let account = accounts[i];
@@ -22,13 +23,17 @@ function login() {
         state.currentUser = account;
         localStorage.setItem('State', JSON.stringify(state));
         closelogin();
+        return;
       } else {
         alert("Looks like that is the wrong password! Try Again.");
       }
-    } else {
-      alert("Hmm.. there is no such email associated with this site. Sign up below!");
+      noemail = false;
     }
   }
+  if (noemail) {
+    alert("Hmm.. there is no such email associated with this site. Sign up below!");
+  }
+
 }
 
 function back() {
