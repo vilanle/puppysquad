@@ -18,6 +18,11 @@ $('#breed-select').change(function() {
   }
 );
 
+$('#searchevents').change(function() {
+    $('.event').hide();
+    $('.corgi').show();
+});
+
 $('#size-select').change(function() {
     let events = JSON.parse(localStorage.Events);
 
